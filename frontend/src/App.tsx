@@ -3,6 +3,7 @@ import './App.css'
 import HomePage from './pages/HomePage'
 import Header from './components/Header'
 import NavLinks from './components/NavLinks'
+import DiscoverPage from './pages/DiscoverPage'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
           <div className="flex-1 min-h-0 overflow-y-auto">
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/discover" element={<DiscoverPage />} />
             </Routes>
           </div>
         </main>

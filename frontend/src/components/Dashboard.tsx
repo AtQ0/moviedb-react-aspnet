@@ -39,7 +39,7 @@ export default function Dashboard() {
     }, [])
 
     if (trendingMovies.length === 0) {
-        return <div>Loading...</div>;
+        return <div className="h-full flex items-center justify-center">Loading...</div>;
     };
 
 

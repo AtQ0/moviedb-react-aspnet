@@ -1,5 +1,6 @@
 import type { MovieDTO } from "@/lib/shared/movies";
 import type { TmdbGenre } from "@/lib/shared/movies";
+import GenreFilterButtons from "./GenreFilterButtons";
 
 type MovieSectionProps = {
     title: string;
@@ -17,10 +18,8 @@ export default function MovieSection({
     type = "poster",
     showGenreFilters = false,
     genres,
-
 }: MovieSectionProps) {
     const list = limit !== undefined ? movies.slice(0, limit) : movies;
-
     const isPoster = type === "poster";
 
     return (
@@ -28,7 +27,7 @@ export default function MovieSection({
             <h1 className="text-2xl font-bold">{title}</h1>
 
             {showGenreFilters && genres && genres.length > 0 && (
-                <div>{/* GenreFilterButtons component here */}</div>
+                <GenreFilterButtons genres={genres} />
             )}
 
             <ul
