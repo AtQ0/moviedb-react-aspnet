@@ -8,24 +8,26 @@ function App() {
 
 
   return (
-    <div className="flex flex-col h-screen">
-      {/* SideBar NavLinks */}
-      <div className="flex flex-row flex-1">
-        <div className="max-sm:hidden w-69.5 shrink-0 border-r border-gray-500 flex flex-col items-center h-screen py-5 overflow-hidden">
+    <div className="flex flex-col h-screen overflow-hidden">
+      <div className="flex flex-row flex-1 min-h-0">
+        {/* Sidebar - static, no scroll */}
+        <div className="max-sm:hidden w-69.5 shrink-0 border-r border-gray-500 flex flex-col items-center h-full overflow-hidden py-5">
           <a href="/">
             <h2 className="text-xl font-semibold">Movies</h2>
           </a>
-
           <div className="flex-1 flex flex-col justify-center px-4">
             <NavLinks />
           </div>
         </div>
 
-        <main className="p-3 flex-1 flex flex-col gap-8">
+        {/* Main: header static, only route content scrolls */}
+        <main className="flex-1 flex flex-col min-h-0 p-3 gap-8">
           <Header />
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-          </Routes>
+          <div className="flex-1 min-h-0 overflow-y-auto">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+            </Routes>
+          </div>
         </main>
       </div>
     </div>

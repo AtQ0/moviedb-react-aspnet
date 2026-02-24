@@ -24,7 +24,7 @@ export default function MovieSection({
     const isPoster = type === "poster";
 
     return (
-        <div className="py-8">
+        <div className="py-8 text-left">
             <h1 className="text-2xl font-bold">{title}</h1>
 
             {showGenreFilters && genres && genres.length > 0 && (
