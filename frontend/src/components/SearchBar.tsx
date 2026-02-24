@@ -12,7 +12,10 @@ export default function SearchBar() {
     function handleSubmit(e: React.FormEvent) {
         e.preventDefault();
         const q = query.trim();
-        if (q) navigate(`/discover?q=${encodeURIComponent(q)}`);
+        if (q) {
+            navigate(`/discover?q=${encodeURIComponent(q)}`);
+            setQuery("");  // clear the input after navigating
+        }
     }
 
     return (
