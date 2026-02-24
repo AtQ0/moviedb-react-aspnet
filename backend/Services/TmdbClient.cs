@@ -1,6 +1,5 @@
 using System.Net.Http.Json;
 using System.Text.Json;
-using Microsoft.AspNetCore.StaticAssets;
 using Microsoft.AspNetCore.WebUtilities;
 using MovieDb.Api.Models;
 
@@ -22,7 +21,7 @@ public sealed class TmdbClient(HttpClient http)
         PropertyNameCaseInsensitive = true,
     };
 
-    internal async Task<TmdbMoviePageResponse> GetMoviesAsync(
+    internal async Task<TmdbMoviePageResponse> FetchMoviesAsync(
         MovieFeedType type,
         int? genreId,
         string? query,
@@ -55,17 +54,21 @@ public sealed class TmdbClient(HttpClient http)
             queryParams["query"] = query.Trim();
         }
 
-
         var url = QueryHelpers.AddQueryString(relative, queryParams);
 
-        return await http.GetFromJsonAsync<TmdbMoviePageResponse>(url, JsonOptions, ct) ?? new TmdbMoviePageResponse();
+        return await http.GetFromJsonAsync<TmdbMoviePageResponse>(
+            url,
+            JsonOptions,
+            ct
+        ) ?? new TmdbMoviePageResponse();
     }
-
 
     internal async Task<TmdbGenreListResponse> GetGenresAsync(CancellationToken ct)
     {
-
-        return await http.GetFromJsonAsync<TmdbGenreListResponse>("genre/movie/list", JsonOptions, ct) ?? new TmdbGenreListResponse();
+        return await http.GetFromJsonAsync<TmdbGenreListResponse>(
+            "genre/movie/list",
+            JsonOptions,
+            ct
+        ) ?? new TmdbGenreListResponse();
     }
-
 }
