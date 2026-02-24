@@ -8,6 +8,10 @@ Monorepo with two frontends (React and Angular) and one ASP.NET Core minimal API
 - **Frontend (Angular):** Angular + TypeScript
 - **Backend:** ASP.NET Core minimal API + .NET
 
+## Design
+
+UI mockups and sketches: [Figma](https://www.figma.com/design/CRWicww7X51RPQMUclcHtd/movieDb?node-id=0-1&m=dev&t=IQeSOMBBADtV5JlP-1)
+
 ## Structure
 
 - `frontend-react/` — React (Vite) SPA
