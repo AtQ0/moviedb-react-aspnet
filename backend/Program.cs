@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOpenApi();
 
+// Create, configure and pass an HttpClient to TmdbClient whenever its called
 builder.Services.AddHttpClient<TmdbClient>((sp, client) =>
 {
     var token = sp.GetRequiredService<IConfiguration>()["Tmdb:ReadAccessToken"];
