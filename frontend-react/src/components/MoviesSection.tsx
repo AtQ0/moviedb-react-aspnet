@@ -51,7 +51,7 @@ export default function MovieSection({
                                         className="w-full rounded-md object-cover lg:w-52"
                                     />
                                 ) : (
-                                    <div className="aspect-[2/3] w-full min-w-[8rem] rounded-md bg-muted flex items-center justify-center text-xs text-muted-foreground">
+                                    <div className="aspect-2/3 w-full min-w-32 rounded-md bg-muted flex items-center justify-center text-xs text-muted-foreground">
                                         No poster
                                     </div>
                                 )}
