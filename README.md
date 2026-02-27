@@ -56,6 +56,7 @@ moviedb-react-angular-aspnet/
 ```
 
 <details> <summary><strong>Click to view full project structure</strong></summary>
+
 ```bash
 moviedb-react-angular-aspnet/
 │
@@ -173,7 +174,9 @@ moviedb-react-angular-aspnet/
 │
 ├── .gitignore
 └── README.md
-```</details>
+```
+
+</details>
 
 ## Prerequisites
 
