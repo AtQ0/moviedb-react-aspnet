@@ -1,35 +1,29 @@
 <main class="flex h-screen bg-black text-white">
-
   <!-- Sidebar -->
-  <aside class="max-sm:hidden w-64 shrink-0 border-r border-gray-700 flex flex-col items-center py-6">
-
+  <aside
+    class="max-sm:hidden w-64 shrink-0 border-r border-gray-700 flex flex-col items-center py-6"
+  >
     <!-- Logo -->
     <a routerLink="/" class="mb-10">
-      <h2 class="text-xl font-semibold">
-        Movies
-      </h2>
+      <h2 class="text-xl font-semibold">Movies</h2>
     </a>
 
     <!-- Navigation -->
     <div class="flex-1 flex flex-col justify-center w-full px-4 items-center">
       <app-nav-links></app-nav-links>
     </div>
-
   </aside>
 
   <!-- Right Side (Header + Page Content) -->
   <div class="flex-1 flex flex-col min-h-0">
-
     <!-- Header -->
     <header class="px-4 py-2 border-gray-800">
       <app-header></app-header>
     </header>
 
     <!-- Scrollable Page Content -->
-    <section class="flex-1 overflow-auto px-4 py-4">
+    <section class="flex-1 overflow-auto px-4 py-4 bg-gray-900">
       <router-outlet></router-outlet>
     </section>
-
   </div>
-
 </main>

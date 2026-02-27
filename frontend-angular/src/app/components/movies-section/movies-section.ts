@@ -5,7 +5,7 @@ import { MovieDto } from '../../shared/models/movie.dto';
   selector: 'app-movies-section',
   imports: [],
   template: `
-    <div class="py-8 text-left">
+    <div class="text-left">
       <h1 class="text-2xl font-bold">{{ title() }}</h1>
     </div>
   `,
