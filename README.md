@@ -174,6 +174,8 @@ moviedb-react-angular-aspnet/
 └── README.md
 ```
 
+</details>
+
 ## Prerequisites
 
 - .NET SDK
